@@ -4,14 +4,14 @@ import DateBox from '../components/dateBox'
 import Link from 'next/link'
 
 type ArticleListProps = {
-    articles: StrapiData[]
+    articles?: StrapiData[]
 }
 
 const ArticleList: React.FC<ArticleListProps> = (props: ArticleListProps) => {
     return (
         <section className="grid gap-2">
         {
-            props.articles.map((item) => (
+            props.articles?.map((item) => (
                 <div key={item.id}>
                     <Link href={`/posts/${item.attributes.slug}`}>
                         <a>

@@ -59,12 +59,12 @@ const PostsPageTemplate: NextPage<PostsPageTemplateProps> = (props: PostsPageTem
                     <aside className="border rounded-md shadow-md p-2 my-2">
                         <div className="flex flex-row">
                             <div className="shrink-0 mr-2">
-                                <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license noopener" target="_blank">
+                                <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license noreferrer noopener" target="_blank">
                                     <Image src={CcLicenseBadge} width={88} height={31} alt="Creative Commons Attribution-ShareAlike 4.0" />
                                 </a>
                             </div>
                             <div>この記事は、
-                                <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license noopener" target="_blank" className="underline">
+                                <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license noreferrer noopener" target="_blank" className="underline">
                                     クリエイティブ・コモンズ 表示-継承 4.0 ライセンス
                                 </a>
                                 で利用できます。ただし、本文中に特別な取り扱いが明記されている場合は、それに従ってください。

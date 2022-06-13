@@ -101,12 +101,13 @@ export async function getStaticPaths(): Promise<GetStaticPathsResult> {
 
     const paths: StaticPropsParams[] = []
 
-    for (let i = 0; i < pageCount; i++) {
+    for (let i = 1; i < pageCount; i++) {
+        // exclude page "1" from prerender
         paths.push({
             params: {
                 page: `${i + 1}`
             }
         })
     }
-    return {paths: paths, fallback: 'blocking'}
+    return {paths: paths, fallback: true}
 }
