@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { StrapiData } from '../@types/strapiResult'
+import { PenguinonePostAttribute, StrapiData } from '../@types/strapiResult'
 import FetchDataFromStrapi from '../lib/fetchDataFromStrapi'
 import Layout from '../components/layout'
 import ArticleList from '../components/articleList'
@@ -8,7 +8,7 @@ import { ChevronDownIcon } from '@heroicons/react/solid'
 import React from 'react'
 
 type HomePageProps = {
-    data: StrapiData[]
+    data: StrapiData<Pick<PenguinonePostAttribute, "slug" | "date" | "title">>[]
     hasNextPage: boolean
 }
 
@@ -40,7 +40,12 @@ export default Home
 
 export async function getStaticProps() {
     const data = await FetchDataFromStrapi({
-        limit: 10
+        limit: 10,
+        fields: [
+            'slug',
+            'date',
+            'title',
+        ],
     })
     return {
         props: {

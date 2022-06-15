@@ -8,6 +8,7 @@ type FetchDataParams = {
     slug?: string
     page?: number
     limit?: number
+    fields?: string[]
 }
 
 export type FetchDataResult = {
@@ -35,6 +36,7 @@ type FetchApiParams = {
     filters?: FilterConditions
     sort?: string[]
     pagination?: PaginationParams
+    fields?: string[]
 }
 
 const FetchDataFromStrapi = async (params?: FetchDataParams): Promise<FetchDataResult> => {
@@ -73,6 +75,10 @@ const FetchDataFromStrapi = async (params?: FetchDataParams): Promise<FetchDataR
             filters: filterConditions,
             sort: ['date:desc'],
             pagination: paginationParam,
+        }
+
+        if (params?.fields) {
+            apiParams.fields = params.fields
         }
 
         requestUrl.search = qs.stringify(apiParams, {

@@ -8,9 +8,9 @@ export type PenguinonePostAttribute = {
     publishedAt: string
 }
 
-export type StrapiData = {
+export type StrapiData<T extends Partial<PenguinonePostAttribute> = PenguinonePostAttribute> = {
     id: number
-    attributes: PenguinonePostAttribute
+    attributes: T
 }
 
 export type StrapiPagination = {

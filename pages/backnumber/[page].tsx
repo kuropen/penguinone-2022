@@ -1,5 +1,5 @@
-import type { GetStaticPathsResult, GetStaticProps, GetStaticPropsResult, NextPage } from 'next'
-import { StrapiData } from '../../@types/strapiResult'
+import type { GetStaticPathsResult, GetStaticPropsResult, NextPage } from 'next'
+import { PenguinonePostAttribute, StrapiData } from '../../@types/strapiResult'
 import FetchDataFromStrapi from '../../lib/fetchDataFromStrapi'
 import Layout from '../../components/layout'
 import ArticleList from '../../components/articleList'
@@ -10,7 +10,7 @@ import React from 'react'
 const LIMIT_PER_PAGE = 10 as const
 
 type BackNumberPageProps = {
-    data: StrapiData[]
+    data: StrapiData<Pick<PenguinonePostAttribute, "slug" | "date" | "title">>[]
     hasNextPage: boolean
     page: number
 }
@@ -76,7 +76,12 @@ export async function getStaticProps(args: StaticPropsParams): Promise<GetStatic
     }
     const data = await FetchDataFromStrapi({
         limit: LIMIT_PER_PAGE,
-        page: pageNum
+        page: pageNum,
+        fields: [
+            'slug',
+            'date',
+            'title',
+        ],
     })
     if (data.allData.length === 0) {
         return {

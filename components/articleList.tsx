@@ -1,10 +1,10 @@
 import { ChevronRightIcon } from "@heroicons/react/solid"
-import { StrapiData } from '../@types/strapiResult'
+import { PenguinonePostAttribute, StrapiData } from '../@types/strapiResult'
 import DateBox from '../components/dateBox'
 import Link from 'next/link'
 
 type ArticleListProps = {
-    articles?: StrapiData[]
+    articles?: StrapiData<Pick<PenguinonePostAttribute, "date" | "slug" | "title">>[]
 }
 
 const ArticleList: React.FC<ArticleListProps> = (props: ArticleListProps) => {
