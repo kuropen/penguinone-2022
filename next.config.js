@@ -8,6 +8,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/privacy',
+        destination: 'https://kuropen.org/privacy',
+        permanent: true,
+      },
+      {
         source: '/en',
         destination: '/',
         permanent: false,
