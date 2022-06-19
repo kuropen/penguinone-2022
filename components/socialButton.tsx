@@ -3,6 +3,7 @@ import * as React from "react"
 type SocialIconProps = {
     children: React.ReactNode
     href: string
+    title?: string
 }
 
 const SocialIcon = (props: SocialIconProps) => (
