@@ -48,8 +48,8 @@ const Layout: React.FC<React.PropsWithChildren> = ({children}) => {
                 <footer className="mt-4 mb-2 pt-2 border-t-2 border-t-primary">
                     <address className="text-right">All rights reserved. Copyright (C) <a href="https://kuropen.org/" />Kuropen.</address>
                 </footer>
-                {process.env.CF_BEACON ? (
-                    <Script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={`{"token": "${process.env.CF_BEACON}"}`} />
+                {process.env.NEXT_PUBLIC_CF_BEACON ? (
+                    <Script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={`{"token": "${process.env.NEXT_PUBLIC_CF_BEACON}"}`} />
                 ) : <React.Fragment />}
             </div>
         </>
