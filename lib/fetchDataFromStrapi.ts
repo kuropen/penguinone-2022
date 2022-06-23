@@ -46,6 +46,10 @@ type FetchApiParams = {
 }
 
 const FetchDataFromStrapi = async (params?: FetchDataParams): Promise<FetchDataResult> => {
+    if (!API_HOST) {
+        throw new Error("API Host variable is not set yet.")
+    }
+
     const requestUrl = new URL(API_URL)
 
     let allData: StrapiData[] = []
@@ -91,11 +95,16 @@ const FetchDataFromStrapi = async (params?: FetchDataParams): Promise<FetchDataR
             encodeValuesOnly: true,
         })
         const apiResponse = await fetch(requestUrl.toString())
-        const result: StrapiResult = await apiResponse.json()
-        allData = allData.concat(result.data)
 
-        hasNextPage = (result.meta.pagination.pageCount > page)
-        page++
+        try {
+            const result: StrapiResult = await apiResponse.json()
+            allData = allData.concat(result.data)
+
+            hasNextPage = (result.meta.pagination.pageCount > page)
+            page++
+        } catch (e: any) {
+            throw new Error("Communication error with strapi: " + e)
+        }
     } while (shouldPaginate && hasNextPage)
 
     return {
