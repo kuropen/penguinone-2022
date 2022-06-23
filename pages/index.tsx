@@ -6,6 +6,7 @@ import ArticleList from '../components/articleList'
 import Link from 'next/link'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import React from 'react'
+import RailwayLink from '../components/railwayLink'
 
 type HomePageProps = {
     data: StrapiData<Pick<PenguinonePostAttribute, "slug" | "date" | "title">>[]
@@ -34,7 +35,7 @@ const Home: NextPage<HomePageProps> = (props: HomePageProps) => {
             ) : <React.Fragment />}
             <section className="my-4 pt-2 px-2 md:px-0 border-t-2 border-t-primary">
                 This website is generated with <a href="https://nextjs.org/" className="underline" target="_blank">Next.js</a> {/**/}
-                and served via <a href="https://railway.app/" className="underline" target="_blank">Railway</a>.<br />
+                and served via <RailwayLink className="underline" target="_blank">Railway</RailwayLink>.<br />
                 Icons used in this website are <a href="https://simpleicons.org/" className="underline" target="_blank">Simple Icons</a> and {/**/}
                 <a href="https://heroicons.com/" className="underline" target="_blank">Heroicons</a>.<br />
                 <a href="https://github.com/kuropen/penguinone-2022" className="underline" target="_blank">Source code for this website</a>

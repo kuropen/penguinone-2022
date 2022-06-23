@@ -11,6 +11,7 @@ import MdImageLoader from "../../components/mdImageLoader"
 import React from "react"
 import CcLicenseBadge from "../../assets/cc-by-sa.svg"
 import Image from "next/image"
+import AnchorReplacer from "../../components/anchorReplacer"
 
 const OGP_HOST = 'https://ogp2.kuropen.org' as const
 
@@ -25,7 +26,8 @@ type PostsPageTemplateParams = {
 }
 
 const replaceComponents = {
-    img: MdImageLoader
+    img: MdImageLoader,
+    a: AnchorReplacer,
 }
 
 const PostsPageTemplate: NextPage<PostsPageTemplateProps> = (props: PostsPageTemplateProps) => {
