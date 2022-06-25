@@ -10,6 +10,7 @@ type SocialIconProps = {
     children: React.ReactNode
     href: string
     title?: string
+    rel?: string
 }
 
 const SocialIcon = (props: SocialIconProps) => (
