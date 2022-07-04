@@ -45,8 +45,12 @@ const Layout: React.FC<React.PropsWithChildren> = ({children}) => {
                 <main>
                     {children}
                 </main>
-                <footer className="mt-4 mb-2 pt-2 border-t-2 border-t-primary">
-                    <address className="text-right">All rights reserved. Copyright (C) <a href="https://kuropen.org/" />Kuropen.</address>
+                <footer className="mt-4 mb-2 pt-2 px-2 md:px-0 border-t-2 border-t-primary">
+                    <div className="flex flex-col md:flex-row gap-2">
+                        <div><a href="https://kuropen.org/privacy" target="_blank" className="underline">プライバシーポリシー</a></div>
+                        <div className="hidden md:block flex-grow"></div>
+                        <address className="text-right">All rights reserved. Copyright (C) <a href="https://kuropen.org/" />Kuropen.</address>
+                    </div>
                 </footer>
                 {process.env.NEXT_PUBLIC_CF_BEACON ? (
                     <Script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={`{"token": "${process.env.NEXT_PUBLIC_CF_BEACON}"}`} />
