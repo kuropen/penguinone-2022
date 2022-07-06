@@ -12,5 +12,15 @@ deploy to production:
   script: railway up
   environment:
     name: production
+    url: https://penguinone.kuropen.org/
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"'
+
+deploy to preview:
+  stage: deploy
+  script: railway up
+  environment:
+    name: preview
+  rules:
+    - if: '$CI_COMMIT_BRANCH != "main"'
+  when: manual
