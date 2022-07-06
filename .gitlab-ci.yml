@@ -1,8 +1,5 @@
 default:
-  image: 'oraclelinux:8'
-  before_script:
-    - dnf install -y curl tar
-    - curl -fsSL https://railway.app/install.sh | sh
+  image: 'kuropen/railway-cli-docker'
 
 stages:
   - deploy
