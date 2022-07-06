@@ -1,0 +1,15 @@
+default:
+  image: 'oraclelinux:8'
+  before_script:
+    - curl -fsSL https://railway.app/install.sh | sh
+
+stages:
+  - deploy
+
+deploy to production:
+  stage: deploy
+  script: railway up
+  environment:
+    name: production
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
