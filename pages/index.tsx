@@ -38,7 +38,7 @@ const Home: NextPage<HomePageProps> = (props: HomePageProps) => {
                 and served via <RailwayLink className="underline" target="_blank">Railway</RailwayLink>.<br />
                 Icons used in this website are <a href="https://simpleicons.org/" className="underline" target="_blank">Simple Icons</a> and {/**/}
                 <a href="https://heroicons.com/" className="underline" target="_blank">Heroicons</a>.<br />
-                <a href="https://github.com/kuropen/penguinone-2022" className="underline" target="_blank">Source code for this website</a>
+                <a href="https://gitlab.com/kuropen/penguinone-2022" className="underline" target="_blank">Source code for this website</a>
             </section>
         </Layout>
     )
