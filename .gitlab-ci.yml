@@ -1,5 +1,8 @@
 default:
-  image: 'kuropen/railway-cli-docker'
+  image: 'alpine:latest'
+  before_script:
+    - apk add curl tar
+    - curl -fsSL https://railway.app/install.sh | sh
 
 stages:
   - deploy
