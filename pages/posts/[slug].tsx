@@ -12,6 +12,7 @@ import React from "react"
 import CcLicenseBadge from "../../assets/cc-by-sa.svg"
 import Image from "next/image"
 import AnchorReplacer from "../../components/anchorReplacer"
+import PreComponent from "../../components/preComponent"
 
 const OGP_HOST = 'https://ogp2.kuropen.org' as const
 
@@ -28,6 +29,7 @@ type PostsPageTemplateParams = {
 const replaceComponents = {
     img: MdImageLoader,
     a: AnchorReplacer,
+    pre: PreComponent, 
 }
 
 const PostsPageTemplate: NextPage<PostsPageTemplateProps> = (props: PostsPageTemplateProps) => {
