@@ -14,7 +14,7 @@ import Image from "next/image"
 import AnchorReplacer from "../../components/anchorReplacer"
 import PreComponent from "../../components/preComponent"
 
-const OGP_HOST = 'https://ogp2.kuropen.org' as const
+const OGP_HOST = 'https://b2fct2c7oj.execute-api.us-west-2.amazonaws.com' as const
 
 type PostsPageTemplateProps = {
     data: StrapiData,
@@ -45,7 +45,7 @@ const PostsPageTemplate: NextPage<PostsPageTemplateProps> = (props: PostsPageTem
                 <meta name="og:type" content="website" />
                 <meta name="og:description" content={`Penguinoneの記事 ${props.data.attributes.title} です。`} />
                 <meta name="og:url" content={`https://penguinone.kuropen.org/posts/${props.slug}`} />
-                <meta name="og:image" content={`${OGP_HOST}/ogp_${props.slug}.png`} />
+                <meta name="og:image" content={`${OGP_HOST}/ogp/${props.slug}`} />
             </Head>
             <article className="mx-1 md:mx-0">
                 <section className="border rounded-md shadow-md p-2 bg-primary text-baseColor">
