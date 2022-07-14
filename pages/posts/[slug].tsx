@@ -38,14 +38,14 @@ const PostsPageTemplate: NextPage<PostsPageTemplateProps> = (props: PostsPageTem
             <Head>
                 <title>{props.data.attributes.title} - Penguinone</title>
                 <meta name="twitter:card" content="summary_large_image"/>
-                <meta name="twitter:image" content={`${OGP_HOST}/ogp_${props.slug}.png`} />
+                <meta name="twitter:image" content={`${OGP_HOST}/ogp/${props.slug}`} />
                 <meta name="twitter:title" content={props.data.attributes.title} />
                 <meta name="twitter:description" content={`Penguinoneの記事 ${props.data.attributes.title} です。`} />
-                <meta name="og:title" content={props.data.attributes.title} />
-                <meta name="og:type" content="website" />
-                <meta name="og:description" content={`Penguinoneの記事 ${props.data.attributes.title} です。`} />
-                <meta name="og:url" content={`https://penguinone.kuropen.org/posts/${props.slug}`} />
-                <meta name="og:image" content={`${OGP_HOST}/ogp/${props.slug}`} />
+                <meta property="og:title" content={props.data.attributes.title} />
+                <meta property="og:type" content="website" />
+                <meta property="og:description" content={`Penguinoneの記事 ${props.data.attributes.title} です。`} />
+                <meta property="og:url" content={`https://penguinone.kuropen.org/posts/${props.slug}`} />
+                <meta property="og:image" content={`${OGP_HOST}/ogp/${props.slug}`} />
             </Head>
             <article className="mx-1 md:mx-0">
                 <section className="border rounded-md shadow-md p-2 bg-primary text-baseColor">
