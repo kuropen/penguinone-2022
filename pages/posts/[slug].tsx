@@ -14,7 +14,7 @@ import Image from "next/image"
 import AnchorReplacer from "../../components/anchorReplacer"
 import PreComponent from "../../components/preComponent"
 
-const OGP_HOST = 'https://b2fct2c7oj.execute-api.us-west-2.amazonaws.com' as const
+const OGP_HOST = 'https://ogp.kuropen.org' as const
 
 type PostsPageTemplateProps = {
     data: StrapiData,
