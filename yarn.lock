@@ -54,11 +54,6 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@fontsource/orbitron@^4.5.8":
-  version "4.5.8"
-  resolved "https://registry.yarnpkg.com/@fontsource/orbitron/-/orbitron-4.5.8.tgz#1304125a8c0ece6b65f29107f320ff7fcdc83424"
-  integrity sha512-En4xVwdVf3g3Rf6fuCWCdgIG9X6k1lW8rb5dZmgYv2WVwWofc14eoaRF551uOoHaWBsxHaF7o5mqY5EmnJaKbA==
-
 "@heroicons/react@^1.0.6":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@heroicons/react/-/react-1.0.6.tgz#35dd26987228b39ef2316db3b1245c42eb19e324"
