@@ -11,10 +11,11 @@ type SocialIconProps = {
     href: string
     title?: string
     rel?: string
+    target?: string
 }
 
 const SocialIcon = (props: SocialIconProps) => (
-    <a className="block rounded-full p-2 shadow-md bg-primary text-baseColor" rel="noopener" {...props} />
+    <a className="block rounded-full p-2 shadow-md bg-primary text-baseColor" {...props} />
 )
 
 export default SocialIcon

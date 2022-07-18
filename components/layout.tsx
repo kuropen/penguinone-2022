@@ -17,6 +17,7 @@ const Layout: React.FC<React.PropsWithChildren> = ({children}) => {
             <Head>
                 <title>Penguinone</title>
                 <link rel="icon" href={PenguinImg.src} />
+                <link rel="me" href="https://fedibird.com/@kuropen" />
             </Head>
             <div className="container max-w-screen-md mx-auto">
                 <header className="flex flex-col md:flex-row my-2 pb-2 border-b-2 items-center border-b-primary">
@@ -36,10 +37,10 @@ const Layout: React.FC<React.PropsWithChildren> = ({children}) => {
                     <div className="hidden grow md:block"></div>
                     <ul className="flex flex-row justify-center md:justify-end gap-x-2">
                         <li><SocialButton href="https://kuropen.org/" title="Profile"><IdentificationIcon className="w-6" /><span className="sr-only">Profile</span></SocialButton></li>
-                        <li><SocialButton href="https://fedibird.com/@kuropen" rel="me"><Mastodon size={SOCIAL_ICON_SIZE} /><span className="sr-only">Mastodon</span></SocialButton></li>
-                        <li><SocialButton href="https://twitter.com/kuropen_aizu"><Twitter size={SOCIAL_ICON_SIZE} /><span className="sr-only">Twitter</span></SocialButton></li>
-                        <li><SocialButton href="https://facebook.com/yuda.hirochika"><Facebook size={SOCIAL_ICON_SIZE} /><span className="sr-only">Facebook</span></SocialButton></li>
-                        <li><SocialButton href="https://github.com/kuropen"><Github size={SOCIAL_ICON_SIZE} /><span className="sr-only">GitHub</span></SocialButton></li>
+                        <li><SocialButton href="https://kuropen.org/fediverse"><Mastodon size={SOCIAL_ICON_SIZE} /><span className="sr-only">Mastodon</span></SocialButton></li>
+                        <li><SocialButton href="https://twitter.com/kuropen_aizu" target="_blank"><Twitter size={SOCIAL_ICON_SIZE} /><span className="sr-only">Twitter</span></SocialButton></li>
+                        <li><SocialButton href="https://facebook.com/yuda.hirochika" target="_blank"><Facebook size={SOCIAL_ICON_SIZE} /><span className="sr-only">Facebook</span></SocialButton></li>
+                        <li><SocialButton href="https://github.com/kuropen" target="_blank"><Github size={SOCIAL_ICON_SIZE} /><span className="sr-only">GitHub</span></SocialButton></li>
                     </ul>
                 </header>
                 <main>
