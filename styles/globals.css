@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url(https://fonts.bunny.net/css?family=orbitron:700);
 
 .orbitron {
     font-family: 'Orbitron', sans-serif;

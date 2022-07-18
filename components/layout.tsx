@@ -16,6 +16,8 @@ const Layout: React.FC<React.PropsWithChildren> = ({children}) => {
         <>
             <Head>
                 <title>Penguinone</title>
+                <link rel="preconnect" href="https://fonts.bunny.net" />
+                <link href="https://fonts.bunny.net/css?family=orbitron:700" rel="stylesheet" />
                 <link rel="icon" href={PenguinImg.src} />
                 <link rel="me" href="https://fedibird.com/@kuropen" />
             </Head>
